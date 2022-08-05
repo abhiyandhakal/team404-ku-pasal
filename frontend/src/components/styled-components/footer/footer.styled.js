@@ -7,6 +7,7 @@ const FooterStyled = styled.footer`
 	display: grid;
 	align-content: center;
 	grid-template-columns: 1.1fr 0.8fr 0.8fr;
+	box-shadow: var(--box-shadow-1);
 `
 
 export default FooterStyled

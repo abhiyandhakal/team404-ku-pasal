@@ -4,10 +4,10 @@ const NavbarStyled = styled.nav`
 	display: grid;
 	width: 100%;
 	height: var(--navbar-height);
-	background: var(--header-footer-bg);
+	background: ${(props) => (props.landing ? null : 'var(--header-footer-bg)')};
 	display: grid;
 	place-items: center;
-	box-shadow: var(--box-shadow-1);
+	box-shadow: ${(props) => (props.landing ? null : 'var(--box-shadow-1)')};
 
 	img {
 		height: 4rem;
@@ -22,7 +22,8 @@ const NavbarStyled = styled.nav`
 
 		a {
 			text-decoration: none;
-			color: var(--text-clr-2);
+			color: ${(props) =>
+				props.landing ? 'var(--text-clr-1)' : 'var(--text-clr-2)'};
 			font-size: 1.1rem;
 			text-transform: uppercase;
 			font-weight: 500;

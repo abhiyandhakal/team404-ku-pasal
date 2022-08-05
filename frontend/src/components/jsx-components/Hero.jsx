@@ -2,11 +2,12 @@ import HeroStyled from '../styled-components/header/hero.styled'
 import H1 from '../styled-components/typography/h1.styled'
 import H2 from '../styled-components/typography/h2.styled'
 import P from '../styled-components/typography/p.styled'
+import heroImage from '../../assets/hero-image.png'
 
 const Hero = () => {
 	return (
 		<HeroStyled>
-			<img src='https://unsplash.it/600/600' alt='hero_image' />
+			<img src={heroImage} alt='hero_image' />
 
 			<div>
 				<H1>

@@ -6,7 +6,7 @@ import ThemeTogglerStyled from '../styled-components/header/theme-toggler.styled
 import { useEffect, useState } from 'react'
 import logo from '../../assets/logo2x.png'
 
-const Navbar = () => {
+const Navbar = ({ landing }) => {
 	const { userId } = useParams()
 	const userID = userId
 
@@ -25,7 +25,7 @@ const Navbar = () => {
 	}, [theme, setTheme])
 
 	return (
-		<NavbarStyled>
+		<NavbarStyled landing={landing}>
 			<ul>
 				<li>
 					{userID ? (
@@ -65,6 +65,7 @@ const Navbar = () => {
 				)}
 				<ThemeTogglerStyled
 					theme={theme}
+					landing={landing}
 					onClick={() =>
 						theme === 'light' ? setTheme('dark') : setTheme('light')
 					}

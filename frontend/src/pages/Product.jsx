@@ -6,6 +6,7 @@ import MainStyled from '../components/styled-components/main/main.styled'
 import H2 from '../components/styled-components/typography/h2.styled'
 import H3 from '../components/styled-components/typography/h3.styled'
 import P from '../components/styled-components/typography/p.styled'
+import RoundBtnInverted from '../components/styled-components/form-elements/round-btn-inverted.styled'
 
 const productList = [
 	{
@@ -150,15 +151,7 @@ const Product = () => {
 					right: 'var(--padding-inline)',
 				}}
 			>
-				<RoundBtn
-					style={{
-						background: 'var(--btn-inverted-bg)',
-						color: 'var(--btn-inverted-clr)',
-						border: '1px solid var(--btn-inverted-clr)',
-					}}
-				>
-					Continue Shopping
-				</RoundBtn>
+				<RoundBtnInverted>Continue Shopping</RoundBtnInverted>
 			</Link>
 		</>
 	)

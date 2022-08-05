@@ -6,6 +6,7 @@ const RoundBtn = styled.button`
 	background-color: var(--btn-bg);
 	color: var(--text-clr-2);
 	padding: 0.5rem 1rem;
+	cursor: pointer;
 	box-shadow: var(--box-shadow-3);
 `
 
