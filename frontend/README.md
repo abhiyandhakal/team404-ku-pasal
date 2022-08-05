@@ -3,6 +3,9 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```bash
+npx create-react-app team404-ku-pasal
+```
 
 ## Available Scripts
 
