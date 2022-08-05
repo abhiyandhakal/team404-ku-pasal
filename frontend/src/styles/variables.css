@@ -2,6 +2,26 @@
 	--navbar-height: 6rem;
 
 	--box-shadow-1: 0 0 1rem rgb(0 0 0 / 0.2);
+
+	--margin-block: 4rem;
+	--margin-inline: 10rem;
+
+	--padding-block: 2rem;
+	--padding-inline: 2rem;
+
+	--hero-height: 25rem;
+
+	--border-radius: 1rem;
+
+	--fz-h1: 2.5rem;
+	--fz-h2: 2rem;
+	--fz-h3: 1.5rem;
+	--fz-p: 1.1rem;
+
+	--fw-h1: 700;
+	--fw-h2: 500;
+	--fw-h3: 400;
+	--fw-p: 300;
 }
 
 #root.light {
@@ -17,7 +37,7 @@
 	--header-footer-bg: #093b7d;
 	--searchbar-bg: #b09c9c;
 	--primary-bg: #181818;
-	--secondary-bg: #a3bada;
+	--secondary-bg: #1a2038;
 	--text-clr-1: white;
 	--text-clr-2: white;
 }
