@@ -6,6 +6,7 @@ const HeroStyled = styled.section`
 	border-radius: var(--border-radius);
 	margin: var(--margin-block) var(--margin-inline);
 	padding: var(--padding-block) var(--padding-inline);
+	box-shadow: var(--box-shadow-2);
 
 	/* to style children */
 	display: grid;

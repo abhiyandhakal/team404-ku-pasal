@@ -1,15 +1,17 @@
 :root {
 	--navbar-height: 6rem;
+	--hero-height: 25rem;
+	--card-height: 25rem;
 
 	--box-shadow-1: 0 0 1rem rgb(0 0 0 / 0.2);
+	--box-shadow-2: 1rem 1rem 0.5rem rgb(0 0 0 / 0.1);
+	--box-shadow-3: 0.5rem 0.5rem 0.5rem rgb(0 0 0 / 0.1);
 
 	--margin-block: 4rem;
 	--margin-inline: 10rem;
 
 	--padding-block: 2rem;
 	--padding-inline: 2rem;
-
-	--hero-height: 25rem;
 
 	--border-radius: 1rem;
 
@@ -29,6 +31,8 @@
 	--searchbar-bg: white;
 	--primary-bg: #deecff;
 	--secondary-bg: #a3bada;
+	--card-bg: #e4f7fd;
+	--btn-bg: #a3bada;
 	--text-clr-1: black;
 	--text-clr-2: white;
 }
@@ -38,6 +42,8 @@
 	--searchbar-bg: #b09c9c;
 	--primary-bg: #181818;
 	--secondary-bg: #1a2038;
+	--card-bg: #e4f7fd;
+	--btn-bg: #a3bada;
 	--text-clr-1: white;
 	--text-clr-2: white;
 }
