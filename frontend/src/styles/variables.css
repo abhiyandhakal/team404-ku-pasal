@@ -1,0 +1,23 @@
+:root {
+	--navbar-height: 6rem;
+
+	--box-shadow-1: 0 0 1rem rgb(0 0 0 / 0.2);
+}
+
+#root.light {
+	--header-footer-bg: #3681e4;
+	--searchbar-bg: white;
+	--primary-bg: #deecff;
+	--secondary-bg: #a3bada;
+	--text-clr-1: black;
+	--text-clr-2: white;
+}
+
+#root.dark {
+	--header-footer-bg: #093b7d;
+	--searchbar-bg: #b09c9c;
+	--primary-bg: #181818;
+	--secondary-bg: #a3bada;
+	--text-clr-1: white;
+	--text-clr-2: white;
+}
