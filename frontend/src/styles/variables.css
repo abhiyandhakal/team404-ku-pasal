@@ -5,7 +5,8 @@
 
 	--box-shadow-1: 0 0 1rem rgb(0 0 0 / 0.2);
 	--box-shadow-2: 1rem 1rem 0.5rem rgb(0 0 0 / 0.1);
-	--box-shadow-3: 0.5rem 0.5rem 0.5rem rgb(0 0 0 / 0.1);
+	--box-shadow-3: 0.5rem 0.5rem 0.5rem rgb(0 0 0 / 0.2);
+	--box-shadow-4: 0 0 0.5rem rgb(0 0 0 / 0.5);
 
 	--margin-block: 4rem;
 	--margin-inline: 10rem;
@@ -20,8 +21,8 @@
 	--fz-h3: 1.5rem;
 	--fz-p: 1.1rem;
 
-	--fw-h1: 700;
-	--fw-h2: 500;
+	--fw-h1: 900;
+	--fw-h2: 700;
 	--fw-h3: 400;
 	--fw-p: 300;
 }

@@ -8,6 +8,11 @@ const NavbarStyled = styled.nav`
 	display: grid;
 	place-items: center;
 	box-shadow: var(--box-shadow-1);
+
+	img {
+		height: 4rem;
+	}
+
 	ul {
 		width: 100%;
 		display: flex;

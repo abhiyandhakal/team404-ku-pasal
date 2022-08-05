@@ -21,7 +21,7 @@ const Card = (product) => {
 				}}
 			>
 				<P>NRs. {price}</P>
-				<RoundBtn>Add to cart</RoundBtn>
+				<RoundBtn>Check out</RoundBtn>
 			</div>
 		</CardStyled>
 	)

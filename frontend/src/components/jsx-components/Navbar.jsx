@@ -1,10 +1,10 @@
 import { Link, useParams } from 'react-router-dom'
 import NavbarStyled from '../styled-components/header/navbar.styled'
-import { AiOutlineShoppingCart } from 'react-icons/ai'
 import SearchbarStyled from '../styled-components/header/searchbar.styled'
 import ProfilePicStyled from '../styled-components/header/profile-pic.styled'
 import ThemeTogglerStyled from '../styled-components/header/theme-toggler.styled'
 import { useEffect, useState } from 'react'
+import logo from '../../assets/logo.svg'
 
 const Navbar = () => {
 	const { userId } = useParams()
@@ -30,11 +30,11 @@ const Navbar = () => {
 				<li>
 					{userID ? (
 						<Link to={`/${userId}/`} className='logo'>
-							<AiOutlineShoppingCart /> Ku-Mart
+							<img src={logo} alt='KU-Pasal' />
 						</Link>
 					) : (
 						<Link to='/' className='logo'>
-							<AiOutlineShoppingCart /> Ku-Mart
+							<img src={logo} alt='KU-Pasal' />
 						</Link>
 					)}
 				</li>

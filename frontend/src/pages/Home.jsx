@@ -1,7 +1,7 @@
 import Hero from '../components/jsx-components/Hero'
 import List from '../components/jsx-components/List'
 import Navbar from '../components/jsx-components/Navbar'
-import MainStyled from '../components/styled-components/main/main-styled'
+import MainStyled from '../components/styled-components/main/main.styled'
 import { v4 as uuid } from 'uuid'
 import Footer from '../components/jsx-components/Footer'
 

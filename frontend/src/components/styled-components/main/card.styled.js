@@ -9,6 +9,7 @@ const CardStyled = styled.article`
 	overflow: hidden;
 	margin-block: var(--padding-block);
 	color: black;
+	box-shadow: var(--box-shadow-4);
 
 	img {
 		width: 100%;
