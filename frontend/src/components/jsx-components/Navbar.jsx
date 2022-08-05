@@ -4,7 +4,7 @@ import SearchbarStyled from '../styled-components/header/searchbar.styled'
 import ProfilePicStyled from '../styled-components/header/profile-pic.styled'
 import ThemeTogglerStyled from '../styled-components/header/theme-toggler.styled'
 import { useEffect, useState } from 'react'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo2x.png'
 
 const Navbar = () => {
 	const { userId } = useParams()
@@ -42,9 +42,6 @@ const Navbar = () => {
 					<>
 						<li>
 							<SearchbarStyled />
-						</li>
-						<li>
-							<Link to={`/${userId}/cart`}>Cart</Link>
 						</li>
 						<li>
 							<Link to={`/${userId}/about`}>About</Link>

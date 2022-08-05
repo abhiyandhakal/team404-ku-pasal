@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom'
 import About from './pages/About'
-import Cart from './pages/Cart'
 import Dashboard from './pages/Dashboard'
 import Home from './pages/Home'
 import Landing from './pages/Landing'
 import Login from './pages/Login'
+import Product from './pages/Product'
 import Signup from './pages/Signup'
 
 const App = () => {
@@ -14,10 +14,10 @@ const App = () => {
 			<Route path='/:userId' element={<Home />} />
 			<Route path='/:userId/about' element={<About />} />
 			<Route path='/about' element={<About />} />
-			<Route path='/:userId/dashboard' element={<Dashboard />} />
-			<Route path='/:userId/cart' element={<Cart />} />
+			<Route path='/:userId/sell' element={<Dashboard />} />
 			<Route path='/login' element={<Login />} />
 			<Route path='/signup' element={<Signup />} />
+			<Route path='/:userId/:productId' element={<Product />} />
 		</Routes>
 	)
 }

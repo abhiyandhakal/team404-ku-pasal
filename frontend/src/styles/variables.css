@@ -34,6 +34,8 @@
 	--secondary-bg: #a3bada;
 	--card-bg: #e4f7fd;
 	--btn-bg: #a3bada;
+	--btn-inverted-bg: var(--primary-bg);
+	--btn-inverted-clr: #3681e4;
 	--text-clr-1: black;
 	--text-clr-2: white;
 }
@@ -45,6 +47,8 @@
 	--secondary-bg: #1a2038;
 	--card-bg: #e4f7fd;
 	--btn-bg: #a3bada;
+	--btn-inverted-bg: var(--primary-bg);
+	--btn-inverted-clr: #3681e4;
 	--text-clr-1: white;
 	--text-clr-2: white;
 }
