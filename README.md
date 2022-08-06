@@ -1,7 +1,6 @@
-
 # 🛒 KU-pasal🏷️
 
-Marketplace for selling and buying stuffs for Kathmandu University Students.
+Marketplace for selling and buying stuff for Kathmandu University Students.
 
 
 ![Logo](https://media.discordapp.net/attachments/1004269075272323092/1005096069148966982/Screen_Shot_2022-08-05_at_18.37.43.png?width=1300&height=580)
@@ -9,13 +8,13 @@ Marketplace for selling and buying stuffs for Kathmandu University Students.
 
 ## 📖 Table of contents
 
-* [About the Project](#a)
-* [Screenshots](#setup)
-* [API reference](#)
-* [Tech Stack](#setup)
-* [License](#technologies)
-* [FAQ](#setup)
-* [Authors](#a)
+* [About the Project](#about-the-project)
+* [Screenshots](#screenshots)
+* [API reference](#api-reference)
+* [Tech Stack](#tech-stack)
+* [License](#license)
+* [FAQ](#faq)
+* [Authors](#authors)
 
 
 
@@ -23,7 +22,7 @@ Marketplace for selling and buying stuffs for Kathmandu University Students.
 
 ## 📝 About the Project
 
-Here at **KU-mart** you will get all sorts of items, both used(mostly) and new items ranging from subject notes to kitchen appliances suppiled by your seniors.
+Here at **KU-mart** you will get all sorts of items, both used(mostly) and new items ranging from subject notes to kitchen appliances supplied by your seniors.
 
 
 
@@ -94,8 +93,7 @@ you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-
-Distributed under the MIT License. See [LICENSE.txt](https://github.com/abhiyandhakal/ku-pasal/blob/main/LICENSE) for more information.
+See [LICENSE.txt](https://github.com/abhiyandhakal/ku-pasal/blob/main/LICENSE) for more information.
 
 
 
@@ -103,33 +101,35 @@ Distributed under the MIT License. See [LICENSE.txt](https://github.com/abhiyand
 
 ## 🙋 FAQ
 
+
 #### What is KU-pasal?
-
-Answer : 
-
-#### How does KU-pasal fit in KU-hackfest?
-
-Open Innovation
+**KU-pasal** is an emerging platform for people, students, and businesses around KU premises that connects the local community to sell, buy and exchange their used goods and services quickly.
 
 #### What problem does your product solve?
-
-Answer : As a first-semester students faced a lot of problems while starting our new life at Kathmandu University.
-One day we were asked to buy a drawing set like a drafter, Tscale, and other stationeries. And other days we were asked to buy lab coats for workshops and notes and assignment questions.
+As a first-semester student, we faced a lot of problems while starting our new life at Kathmandu University.
+One day, we were asked to buy a drawing set like a drafter, Scale, and other stationeries. And other days, we were asked to buy lab coats for workshops, notes, and assignment questions.
 Also setting up the room is one of the most challenging parts of starting our life on college premises. From basic setup like carpet, bed, mattress to table, cupboard, etc 
 As the university is away from any big market area, there are very few competitors selling products on huge margins.
-Also, buying second-hand products is very very difficult for new students who know other seniors. Also if they do have also,  it is very difficult to manually call everyone and ask and fix a proper price for any product.
+Also, buying second-hand products is very very difficult for new students who don't know other seniors. Also if they do have also,  it is very difficult to manually call everyone and ask and fix a proper price for any product.
 
-#### Question 2
+So,to mitigate this problem, KU-pasal is here.
 
-#### Question 2
 
-#### Question 2
+#### Why should we choose you over other platforms?
+Firstly, we are the first digital shop that is accessible to KU students and the people around here, so the first-comer advantage is always with us. Secondly, we are planning to include a reward system that will help us maintain customer retention. Also, our marketing team has some creative plans like pre-booking the “Student Starter Pack” during the entrance exam and many more schemes that are great for the future of our organization.
+
+#### Do you see any future in this project?
+ As Kathmandu University is recruiting thousands of students every year, most of the students are probably going to face the same inconvenience. So, we are looking to solve such inconveniences so we can see a great future in this field. 
+
+#### How do you ensure that there is no spam on your platform?
+ Currently, we have implemented some spam prevention techniques which make sure no buyer can mass-list their products. A seller now can only list at most 10 products per hour. 
+
+#### How do you plan to monetize your platform?
+ We will be taking some cuts from the buyers when a product is sold through our website. We will buy items in bulk which we lower our cost price and will be selling our products in retail value which is a good source of income.
+
+
 
 ## Authors
-
-
-
-
 
 - [@ashish](https://github.com/ItsAash)
 - [@abhiyandhakal](https://github.com/abhiyandhakal/)
