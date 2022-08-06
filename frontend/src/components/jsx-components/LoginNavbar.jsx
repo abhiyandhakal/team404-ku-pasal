@@ -1,14 +1,24 @@
 import logo from '../../assets/logo.svg';
 import StyledLoginNavbar from '../styled-components/header/login-navbar.styled';
-import P from '../styled-components/typography/p.styled'
+import {Link} from "react-router-dom"
 
 const LoginNavbar = () => {
   return (
     <StyledLoginNavbar>
-            <img src={logo} alt="ku pasal"/>
+            <Link to={'/'}>
+                  <img src={logo} alt="ku pasal"/>
+            </Link>
+            
             <section className='navSection'>
+            <Link to='/about' style={{ color:"inherit"}}>
               <h3>About</h3>
-              <h3>Help</h3>
+            </Link>
+
+        <Link to='/help' style={{ color: "inherit" }}>
+          <h3>Help</h3>
+        </Link>
+              
+          
             </section>
     </StyledLoginNavbar>
   )

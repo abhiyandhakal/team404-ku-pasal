@@ -1,30 +1,35 @@
 import Footer from '../components/jsx-components/Footer'
 import Navbar from '../components/jsx-components/Navbar'
 import MainStyled from '../components/styled-components/main/main.styled'
+import H1 from '../components/styled-components/typography/h1.styled'
+import H3 from '../components/styled-components/typography/h3.styled'
 
 const About = () => {
 	return (
-		<>
+		<div style={{maxHeight:"100px",}}>
 			<header>
 				<Navbar />
 			</header>
 			<MainStyled>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-					dolore, facilis obcaecati temporibus saepe incidunt molestiae
-					excepturi amet, delectus fugiat cumque reprehenderit cum libero dicta
-					illo numquam debitis nulla quo odio eaque neque id adipisci! Nam
-					deserunt ex ratione non consequuntur corrupti, tenetur eius officiis,
-					vero pariatur nihil incidunt asperiores quae natus eum, perferendis
-					in? Sunt, deleniti quod vitae cumque itaque vel? Nam vitae quia illo
-					quis, ex alias nobis quam aspernatur aliquid sit tempore totam
-					praesentium exercitationem nisi quibusdam, non eaque corrupti.
-					Quibusdam mollitia enim exercitationem inventore earum fugit rerum,
-					rem cumque quae, iure suscipit quo magni maiores reiciendis!
-				</p>
+				<H1 style={{
+					
+
+				}}>About Us</H1>
+				<H3 style={{
+						paddingTop:"3rem",
+						textTransform:"none",
+				}}>
+					KU-pasal is an emerging platform for people, students, and businesses around KU premises.
+					KU-pasal connects the local community to sell, buy and exchange their used goods and services quickly and easily so that anyone can post an announcement on their cell phone or on the website itself. We offer you a free website where you can find and sell a wide range of new, fresh and used –second-hand products like Guitar, laptops, mobile phones, furniture, stationery items, goods, and local services, and many other products.
+					At KU-pasal we believe in making KU-pasal a better place: we improve students’ lives by bringing them together for mutual benefit exchanges. Sellers can easily earn some extra money simply by publishing products they no longer use or those they want to sell - thus, allowing buyers to find high-value items at reasonable prices.
+				</H3>
+
+
+
+
 			</MainStyled>
 			<Footer />
-		</>
+		</div>
 	)
 }
 
