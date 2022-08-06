@@ -39,25 +39,68 @@ Here at **KU-mart** you will get all sorts of items, both used(mostly) and new i
 
 ## 📃API Reference
 
-#### Get all items
+#### Get all products
 
-```http
-  GET /api/items
+```
+query Products {
+  products {
+    _id
+    name
+    description
+    seller {
+      _id
+      username
+     }
+  }
+  
+}
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
+#### Get product by ID
 
-#### Get item
-
-```http
-  GET /api/items/${id}
+```
+query ProductByID($_id: String!) {
+  productByID(_id: $id) {
+    _id
+    name
+    description
+    seller {
+      _id
+      username
+     }
+  }
+  
+}
 ```
 
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
+| Parameter | Type     | Description                           |
+| :-------- | :------- | :------------------------------------ |
+| `_id`     | `string` | **Required**. ID of product to fetch  |
+
+
+#### Get user by ID
+
+```
+query UserByID ($_id: String!) {
+    userById(_id: $_id) {
+        _id
+        username
+        email
+        phoneNo
+        profile {
+          avatar
+          address
+        }
+        products {
+          _id
+          name
+        }
+    }
+}
+```
+| Parameter | Type      | Description                       |
+| :-------- | :-------- | :-------------------------------- |
+| `_id`     | `string`  | **Required**. ID of user to fetch |
 
 
 ## Tech Stack
