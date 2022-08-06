@@ -1,11 +1,29 @@
 
+# Contents:
+```
+	Frontend
+	├── README.md
+	├── package.json
+	├── .gitignore
+	├── public
+	│   ├── favicon.ico
+	│   ├── index.html
+	│   └── manifest.json
+	└── src
+		├── components
+		├── pages
+		├── styles
+		├── App.js
+		├── App.test.js
+		├── index.js
+		├── reportWebVitals.js
+		└── setupTests.js
+```
+
 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-```bash
-npx create-react-app team404-ku-pasal
-```
 
 ## Available Scripts
 
