@@ -125,10 +125,11 @@ const Product = () => {
 						Price: <b>{price}</b>
 					</P>
 					<P>
-						Category: <b>{category}</b>
+						Category: <b style={{ textTransform: 'capitalize' }}>{category}</b>
 					</P>
 					<P>
-						Seller: <b>Prabesh Guragain</b>
+						Seller:{' '}
+						<b style={{ textTransform: 'capitalize' }}>Prabesh Guragain</b>
 					</P>
 					<P>
 						Used for: <b>6 months</b>
