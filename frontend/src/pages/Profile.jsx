@@ -8,7 +8,6 @@ import RoundBtnInverted from '../components/styled-components/form-elements/roun
 import RoundBtn from '../components/styled-components/form-elements/round-btn.styled'
 import H2 from '../components/styled-components/typography/h2.styled'
 import H3 from '../components/styled-components/typography/h3.styled'
-import SectionStyled from '../components/styled-components/main/section.styled'
 import P from '../components/styled-components/typography/p.styled'
 
 const formElements = [
