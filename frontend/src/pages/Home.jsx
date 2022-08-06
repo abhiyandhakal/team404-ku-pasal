@@ -1,78 +1,87 @@
-import Hero from "../components/jsx-components/Hero";
-import List from "../components/jsx-components/List";
-import Navbar from "../components/jsx-components/Navbar";
-import MainStyled from "../components/styled-components/main/main.styled";
-import { v4 as uuid } from "uuid";
-import Footer from "../components/jsx-components/Footer";
+import Hero from '../components/jsx-components/Hero'
+import List from '../components/jsx-components/List'
+import Navbar from '../components/jsx-components/Navbar'
+import MainStyled from '../components/styled-components/main/main.styled'
+import { v4 as uuid } from 'uuid'
+import Footer from '../components/jsx-components/Footer'
 
-import { gql, useQuery } from "@apollo/client";
+import { gql, useQuery } from '@apollo/client'
+import { useParams } from 'react-router-dom'
+
+const ME = gql`
+	query Me {
+		me {
+			_id
+			username
+		}
+	}
+`
 
 const PRODUCTS = gql`
-  query Products {
-    products {
-      _id
-      name
-      description
-      category
-      available
-      createdAt
-      thumbnail
-      seller {
-        _id
-        username
-        profile {
-          address
-          avatar
-        }
-      }
-      price
-    }
-  }
-`;
+	query Products {
+		products {
+			_id
+			name
+			description
+			category
+			available
+			createdAt
+			thumbnail
+			seller {
+				_id
+				username
+				profile {
+					address
+					avatar
+				}
+			}
+			price
+		}
+	}
+`
 
 const Home = () => {
-  const { data, error } = useQuery(PRODUCTS);
+	const { data, error } = useQuery(PRODUCTS)
+	const { meData, meErr } = useQuery(ME)
 
-  console.log(data);
-  if (error) {
-    return <div>Error: {JSON.stringify(error)}</div>;
-  }
-  if (!data) {
-    return "Loading...";
-  }
+	console.log(data, meData)
+	if (error) {
+		return <div>Error: {JSON.stringify(error)}</div>
+	}
+	if (!data) {
+		return 'Loading...'
+	}
 
-  const categoryList = [
-    "all products",
-    ...new Set(data.products.map((product) => product.category)),
-  ];
-  return (
-    <>
-      <header>
-        <Navbar />
-        <Hero />
-      </header>
-      <MainStyled>
-        {categoryList.map((category) => {
-          const uniqueId = uuid();
+	const categoryList = [
+		'all products',
+		...new Set(data.products.map((product) => product.category)),
+	]
+	return (
+		<>
+			<header>
+				<Navbar />
+				<Hero />
+			</header>
+			<MainStyled>
+				{categoryList.map((category) => {
+					const uniqueId = uuid()
 
-          const filteredList =
-            category === "all products"
-              ? data.products
-              : data.products.filter(
-                  (product) => product.category === category
-                );
-          return (
-            <List
-              key={uniqueId}
-              filteredList={filteredList}
-              category={category}
-            />
-          );
-        })}
-      </MainStyled>
-      <Footer />
-    </>
-  );
-};
+					const filteredList =
+						category === 'all products'
+							? data.products
+							: data.products.filter((product) => product.category === category)
+					return (
+						<List
+							key={uniqueId}
+							filteredList={filteredList}
+							category={category}
+						/>
+					)
+				})}
+			</MainStyled>
+			<Footer />
+		</>
+	)
+}
 
-export default Home;
+export default Home
