@@ -16,7 +16,7 @@ const Card = (product) => {
 					color: 'inherit',
 					textDecoration: 'none',
 				}}
-				to={`/${userId}/${id}`}
+				to={`/${userId}/product/${id}`}
 			>
 				<H3 style={{ marginInline: 'calc(var(--padding-inline) / 4)' }}>
 					{title}
@@ -31,7 +31,7 @@ const Card = (product) => {
 				}}
 			>
 				<P>NRs. {price}</P>
-				<Link to={`/${userId}/${id}`}>
+				<Link to={`/${userId}/product/${id}`}>
 					<RoundBtn>Check out</RoundBtn>
 				</Link>
 			</div>

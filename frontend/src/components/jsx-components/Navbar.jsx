@@ -73,7 +73,9 @@ const Navbar = ({ landing }) => {
 				{userID ? (
 					<>
 						<li>
-							<ProfilePicStyled src='https://unsplash.it/50/50' />
+							<Link to={`/${userId}/profile`}>
+								<ProfilePicStyled src='https://unsplash.it/50/50' />
+							</Link>
 						</li>
 					</>
 				) : null}
