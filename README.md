@@ -60,10 +60,6 @@ Here at **KU-mart** you will get all sorts of items, both used(mostly) and new i
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of item to fetch |
 
-#### add(num1, num2)
-
-Takes two numbers and returns the sum.
-
 
 ## Tech Stack
 
@@ -73,6 +69,8 @@ Takes two numbers and returns the sum.
 * [![GRAPHQL][GRAPHQL]][graphql-url]
 * [![markdown][markdown]][markdown-url]
 * [![Postman][postman]][postman-url]
+* ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+
 
 
 [markdown]:https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white
