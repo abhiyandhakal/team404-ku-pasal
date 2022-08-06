@@ -105,13 +105,19 @@ Distributed under the MIT License. See [LICENSE.txt](https://github.com/abhiyand
 
 #### What is KU-pasal?
 
-Answer 1
+Answer : 
 
 #### How does KU-pasal fit in KU-hackfest?
 
 Open Innovation
 
-#### Question 2
+#### What problem does your product solve?
+
+Answer : As a first-semester students faced a lot of problems while starting our new life at Kathmandu University.
+One day we were asked to buy a drawing set like a drafter, Tscale, and other stationeries. And other days we were asked to buy lab coats for workshops and notes and assignment questions.
+Also setting up the room is one of the most challenging parts of starting our life on college premises. From basic setup like carpet, bed, mattress to table, cupboard, etc 
+As the university is away from any big market area, there are very few competitors selling products on huge margins.
+Also, buying second-hand products is very very difficult for new students who know other seniors. Also if they do have also,  it is very difficult to manually call everyone and ask and fix a proper price for any product.
 
 #### Question 2
 
