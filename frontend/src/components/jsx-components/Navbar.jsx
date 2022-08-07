@@ -6,7 +6,7 @@ import ThemeTogglerStyled from '../styled-components/header/theme-toggler.styled
 import { useEffect, useState } from 'react'
 import logo from '../../assets/logo2x.png'
 
-const Navbar = ({ landing }) => {
+const Navbar = ({ landing, profilePic }) => {
 	const { userId } = useParams()
 	const userID = userId
 
@@ -47,7 +47,7 @@ const Navbar = ({ landing }) => {
 							<Link to={`/${userId}/about`}>About</Link>
 						</li>
 						<li>
-							<Link to={`/${userId}/dashboard`}>Sell</Link>
+							<Link to={`/${userId}/sell`}>Sell</Link>
 						</li>
 					</>
 				) : (
@@ -74,7 +74,7 @@ const Navbar = ({ landing }) => {
 					<>
 						<li>
 							<Link to={`/${userId}/profile`}>
-								<ProfilePicStyled src='https://unsplash.it/50/50' />
+								<ProfilePicStyled src={profilePic} />
 							</Link>
 						</li>
 					</>

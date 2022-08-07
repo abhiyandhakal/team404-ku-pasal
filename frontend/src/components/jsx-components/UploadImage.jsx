@@ -2,18 +2,17 @@ import UploadImageStyled from '../styled-components/form-elements/upload-image.s
 import { BiUpload } from 'react-icons/bi'
 import P from '../styled-components/typography/p.styled'
 
-const UploadImage = () => {
+const UploadImage = ({ setThumbnail }) => {
 	return (
 		<UploadImageStyled
 			onClick={() => document.getElementById('image-uploader').click()}
 		>
 			<BiUpload />
-			<P>maximum of 5mb</P>
+			<P>Enter link to your thumbnail</P>
 			<input
-				type='file'
-				accept='image/jpg, image/jpeg, image/png, image/gif, image/svg, image/webp'
+				type='text'
 				id='image-uploader'
-				hidden
+				onChange={(e) => setThumbnail(e.target.value)}
 			/>
 		</UploadImageStyled>
 	)

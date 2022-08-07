@@ -109,7 +109,7 @@ const main = async () => {
 		// Removes the ongoing ticket
 		redis.del(__VERIFY_EMAIL_TICKET_PREFIX__ + userID)
 
-		res.send('User has been verified, now redirecting you back.')
+		res.send('User has been verified, please go to the homepage.')
 	})
 
 	app.get('/resend-email-verification/:userID', async (req, res) => {

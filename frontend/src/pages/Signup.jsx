@@ -1,16 +1,15 @@
 import SignupForm from '../components/jsx-components/SignupForm'
-import LoginNavbar from "../components/jsx-components/LoginNavbar"
+import LoginNavbar from '../components/jsx-components/LoginNavbar'
 import background from '../assets/signup_bg.png'
-
 
 const Signup = () => {
 	const myImage = {
 		backgroundImage: `url(${background})`,
 		backgroundPosition: 'center',
-		backgroundRepeat: "no-repeat",
+		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
-		height: "100vh",
-		width: "100%",
+		height: '100vh',
+		width: '100%',
 	}
 	return (
 		<div style={myImage}>

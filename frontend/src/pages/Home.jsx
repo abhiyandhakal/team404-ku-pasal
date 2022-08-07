@@ -6,13 +6,17 @@ import { v4 as uuid } from 'uuid'
 import Footer from '../components/jsx-components/Footer'
 
 import { gql, useQuery } from '@apollo/client'
-import { useParams } from 'react-router-dom'
 
 const ME = gql`
 	query Me {
 		me {
-			_id
-			username
+			user {
+				_id
+				username
+				profile {
+					avatar
+				}
+			}
 		}
 	}
 `
@@ -42,9 +46,7 @@ const PRODUCTS = gql`
 
 const Home = () => {
 	const { data, error } = useQuery(PRODUCTS)
-	const { meData, meErr } = useQuery(ME)
-
-	console.log(data, meData)
+	const { data: meData } = useQuery(ME)
 	if (error) {
 		return <div>Error: {JSON.stringify(error)}</div>
 	}
@@ -59,7 +61,7 @@ const Home = () => {
 	return (
 		<>
 			<header>
-				<Navbar />
+				<Navbar profilePic={meData ? meData.me.user.profile.avatar : null} />
 				<Hero />
 			</header>
 			<MainStyled>

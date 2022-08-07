@@ -4,6 +4,7 @@ const CardStyled = styled.article`
 	height: var(--card-height);
 	width: calc(var(--card-height) * 0.7);
 	display: grid;
+	grid-template-rows: 1.2fr auto auto;
 	background-color: var(--card-bg);
 	border-radius: var(--border-radius);
 	overflow: hidden;
@@ -12,7 +13,7 @@ const CardStyled = styled.article`
 	box-shadow: var(--box-shadow-4);
 
 	img {
-		width: 100%;
+		height: 90%;
 		object-fit: cover;
 	}
 `
