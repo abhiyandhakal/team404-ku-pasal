@@ -278,6 +278,8 @@ export class ProductResolver {
       buyer: user._id,
       seller: (p.seller as User)._id,
     });
+    p.sold = true;
+    await p.save();
     await order.save();
     return order;
   }
