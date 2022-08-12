@@ -1,14 +1,14 @@
-import { Link, useParams } from 'react-router-dom'
-import Navbar from '../components/jsx-components/Navbar'
-import RoundBtn from '../components/styled-components/form-elements/round-btn.styled'
-import ArticleStyled from '../components/styled-components/main/article.styled'
-import MainStyled from '../components/styled-components/main/main.styled'
-import H2 from '../components/styled-components/typography/h2.styled'
-import H3 from '../components/styled-components/typography/h3.styled'
-import P from '../components/styled-components/typography/p.styled'
-import RoundBtnInverted from '../components/styled-components/form-elements/round-btn-inverted.styled'
+import { Link, useParams } from 'react-router-dom';
+import Navbar from '../components/jsx-components/Navbar';
+import RoundBtn from '../components/styled-components/form-elements/round-btn.styled';
+import ArticleStyled from '../components/styled-components/main/article.styled';
+import MainStyled from '../components/styled-components/main/main.styled';
+import H2 from '../components/styled-components/typography/h2.styled';
+import H3 from '../components/styled-components/typography/h3.styled';
+import P from '../components/styled-components/typography/p.styled';
+import RoundBtnInverted from '../components/styled-components/form-elements/round-btn-inverted.styled';
 
-import { gql, useQuery } from '@apollo/client'
+import { gql, useQuery } from '@apollo/client';
 
 const PRODUCT_BY_ID = gql`
 	query ProductByID($_id: String!) {
@@ -34,20 +34,20 @@ const PRODUCT_BY_ID = gql`
 			price
 		}
 	}
-`
+`;
 const Product = () => {
-	const { productId } = useParams()
+	const { productId } = useParams();
 
 	const { data, error } = useQuery(PRODUCT_BY_ID, {
 		variables: { _id: productId },
-	})
+	});
 
 	if (!data) {
-		return <div>Loading...</div>
+		return <div>Loading...</div>;
 	}
 
 	if (error) {
-		return <div>Error: {error.message}</div>
+		return <div>Error: {error.message}</div>;
 	}
 	return (
 		<>
@@ -75,7 +75,9 @@ const Product = () => {
 							boxShadow: 'var(--box-shadow-2)',
 						}}
 					/>
-					<RoundBtn>Buy Now</RoundBtn>
+					<Link to='/buyrequestsent'>
+						<RoundBtn>Buy Now</RoundBtn>
+					</Link>
 				</div>
 
 				<ArticleStyled>
@@ -116,7 +118,7 @@ const Product = () => {
 				<RoundBtnInverted>Continue Shopping</RoundBtnInverted>
 			</Link>
 		</>
-	)
-}
+	);
+};
 
-export default Product
+export default Product;

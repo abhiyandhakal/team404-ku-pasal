@@ -1,9 +1,9 @@
-import StyledForm from '../styled-components/form-elements/login-form.styled'
-import H1 from '../styled-components/typography/h1.styled'
-import H3 from '../styled-components/typography/h3.styled'
-import { gql, useMutation } from '@apollo/client'
-import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import StyledForm from '../styled-components/form-elements/login-form.styled';
+import H1 from '../styled-components/typography/h1.styled';
+import H3 from '../styled-components/typography/h3.styled';
+import { gql, useMutation } from '@apollo/client';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const CHECK_LOGIN = gql`
 	mutation ($password: String!, $username: String!) {
@@ -13,44 +13,44 @@ const CHECK_LOGIN = gql`
 			}
 		}
 	}
-`
+`;
 
-const LoginForm = () => {
-	const [username, setUsername] = useState('')
-	const [text, setText] = useState('')
-	const [password, setPassword] = useState('')
-	const navigate = useNavigate()
-	const [user, { data, error }] = useMutation(CHECK_LOGIN)
+const LoginForm = ({ formText }) => {
+	const [username, setUsername] = useState('');
+	const [text, setText] = useState('');
+	const [password, setPassword] = useState('');
+	const navigate = useNavigate();
+	const [user, { data, error }] = useMutation(CHECK_LOGIN);
 	if (!user) {
-		return 'Loading...'
+		return 'Loading...';
 	}
 
 	const handleSubmit = (event) => {
-		event.preventDefault()
+		event.preventDefault();
 		user({
 			variables: {
 				username: username,
 				password: password,
 			},
-		})
+		});
 
-		if (error) setText('Please try again')
+		if (error) setText('Please try again');
 
 		if (data) {
-			navigate(`/1`, { replace: true })
+			navigate(`/1`, { replace: true });
 		} else {
 			return (
 				<H1>
 					Please try again <Link to='/login'>here.</Link>
 				</H1>
-			)
+			);
 		}
-	}
+	};
 
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit}>
-				<H1>{text}</H1>
+				<H1>{text || formText}</H1>
 				<div className='usernameLogin'>
 					<H3>Username</H3>
 					<input
@@ -79,7 +79,7 @@ const LoginForm = () => {
 				</h4>
 			</StyledForm>
 		</>
-	)
-}
+	);
+};
 
-export default LoginForm
+export default LoginForm;

@@ -2,7 +2,7 @@ import LoginNavbar from '../components/jsx-components/LoginNavbar';
 import LoginForm from '../components/jsx-components/LoginForm';
 import background from '../assets/login_page_bg.png';
 
-const Login = () => {
+const AdminLogin = () => {
 	const myImage = {
 		backgroundImage: `url(${background})`,
 		backgroundPosition: 'center',
@@ -15,10 +15,10 @@ const Login = () => {
 		<>
 			<div style={myImage}>
 				<LoginNavbar />
-				<LoginForm formText='login here' />
+				<LoginForm formText='admin login' />
 			</div>
 		</>
 	);
 };
 
-export default Login;
+export default AdminLogin;

@@ -1,25 +1,19 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const StyledForm = styled.form`
 	display: grid;
 	place-items: center;
 	background-color: var(--form-bg);
 	width: var(--form-width);
-	height: var(--form-height);
 	gap: 1.45rem;
-	margin: var(--form-margin);
+	margin-inline: var(--form-margin-inline);
 	border-radius: 1.6rem;
 	box-shadow: var(--box-shadow-2);
+	padding-block: var(--padding-block);
 
 	h1 {
 		letter-spacing: 1px;
 		word-spacing: 5px;
-		margin-top: var(--padding-block);
-	}
-
-	h3 {
-		/* padding-bottom: 1rem;
-		padding-left: 1rem; */
 	}
 	input {
 		border: 0;
@@ -44,6 +38,6 @@ const StyledForm = styled.form`
 	p {
 		font-size: 1.2rem;
 	}
-`
+`;
 
-export default StyledForm
+export default StyledForm;

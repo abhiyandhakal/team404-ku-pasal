@@ -1,14 +1,14 @@
-import Navbar from '../components/jsx-components/Navbar'
-import MainStyled from '../components/styled-components/main/main.styled'
-import ProductFormStyled from '../components/styled-components/form-elements/product-form.styled'
-import ArticleStyled from '../components/styled-components/main/article.styled'
-import UploadImage from '../components/jsx-components/UploadImage'
-import { Link, useParams } from 'react-router-dom'
-import RoundBtnInverted from '../components/styled-components/form-elements/round-btn-inverted.styled'
-import RoundBtn from '../components/styled-components/form-elements/round-btn.styled'
-import H2 from '../components/styled-components/typography/h2.styled'
-import H3 from '../components/styled-components/typography/h3.styled'
-import P from '../components/styled-components/typography/p.styled'
+import Navbar from '../components/jsx-components/Navbar';
+import MainStyled from '../components/styled-components/main/main.styled';
+import ProductFormStyled from '../components/styled-components/form-elements/product-form.styled';
+import ArticleStyled from '../components/styled-components/main/article.styled';
+import UploadImage from '../components/jsx-components/UploadImage';
+import { Link, useParams } from 'react-router-dom';
+import RoundBtnInverted from '../components/styled-components/form-elements/round-btn-inverted.styled';
+import RoundBtn from '../components/styled-components/form-elements/round-btn.styled';
+import H2 from '../components/styled-components/typography/h2.styled';
+import H3 from '../components/styled-components/typography/h3.styled';
+import P from '../components/styled-components/typography/p.styled';
 
 const formElements = [
 	{
@@ -35,10 +35,22 @@ const formElements = [
 		type: 'text',
 		placeholder: 'Eg. KU Gate',
 	},
-]
+];
 
 const Profile = () => {
-	const { userId } = useParams()
+	const { userId } = useParams();
+
+	function deleteAllCookies() {
+		var cookies = document.cookie.split(';');
+
+		for (var i = 0; i < cookies.length; i++) {
+			document.cookie.split(';').forEach(function (c) {
+				document.cookie = c
+					.replace(/^ +/, '')
+					.replace(/=.*/, '=;expires=' + new Date().toUTCString() + ';path=/');
+			});
+		}
+	}
 
 	return (
 		<>
@@ -60,7 +72,7 @@ const Profile = () => {
 									<label htmlFor={id}>{title}</label>
 									<input type={type} placeholder={placeholder} />
 								</div>
-							)
+							);
 						})}
 						<div className='elementContainer'>
 							<label htmlFor='6'>Bio: </label>
@@ -137,12 +149,12 @@ const Profile = () => {
 				}}
 			>
 				<Link to={`/${userId}`}>
-					<RoundBtnInverted>Continue Shopping</RoundBtnInverted>
+					<RoundBtnInverted value='setCookie'>Log out</RoundBtnInverted>
 				</Link>
-				<RoundBtn>Save</RoundBtn>
+				<RoundBtn onClick={deleteAllCookies}>Save</RoundBtn>
 			</div>
 		</>
-	)
-}
+	);
+};
 
-export default Profile
+export default Profile;

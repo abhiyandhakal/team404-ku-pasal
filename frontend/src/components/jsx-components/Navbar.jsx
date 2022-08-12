@@ -1,28 +1,45 @@
-import { Link, useParams } from 'react-router-dom'
-import NavbarStyled from '../styled-components/header/navbar.styled'
-import SearchbarStyled from '../styled-components/header/searchbar.styled'
-import ProfilePicStyled from '../styled-components/header/profile-pic.styled'
-import ThemeTogglerStyled from '../styled-components/header/theme-toggler.styled'
-import { useEffect, useState } from 'react'
-import logo from '../../assets/logo2x.png'
+import { Link, useParams } from 'react-router-dom';
+import NavbarStyled from '../styled-components/header/navbar.styled';
+import SearchbarStyled from '../styled-components/header/searchbar.styled';
+import ProfilePicStyled from '../styled-components/header/profile-pic.styled';
+import ThemeTogglerStyled from '../styled-components/header/theme-toggler.styled';
+import { useEffect, useState } from 'react';
+import logo from '../../assets/logo2x.png';
+import { gql, useQuery } from '@apollo/client';
 
-const Navbar = ({ landing, profilePic }) => {
-	const { userId } = useParams()
-	const userID = userId
+const ME = gql`
+	query Me {
+		me {
+			user {
+				_id
+				username
+				profile {
+					avatar
+				}
+			}
+		}
+	}
+`;
 
-	const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
+const Navbar = ({ landing }) => {
+	const { userId } = useParams();
+	const { data: meData } = useQuery(ME);
+
+	const userID = userId;
+
+	const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
 	useEffect(() => {
 		if (theme === 'light') {
-			localStorage.setItem('theme', 'light')
-			document.getElementById('root').classList.add('light')
-			document.getElementById('root').classList.remove('dark')
+			localStorage.setItem('theme', 'light');
+			document.getElementById('root').classList.add('light');
+			document.getElementById('root').classList.remove('dark');
 		} else {
-			localStorage.setItem('theme', 'dark')
-			document.getElementById('root').classList.add('dark')
-			document.getElementById('root').classList.remove('light')
+			localStorage.setItem('theme', 'dark');
+			document.getElementById('root').classList.add('dark');
+			document.getElementById('root').classList.remove('light');
 		}
-	}, [theme, setTheme])
+	}, [theme, setTheme]);
 
 	return (
 		<NavbarStyled landing={landing}>
@@ -74,14 +91,16 @@ const Navbar = ({ landing, profilePic }) => {
 					<>
 						<li>
 							<Link to={`/${userId}/profile`}>
-								<ProfilePicStyled src={profilePic} />
+								<ProfilePicStyled
+									src={meData ? meData.me.user.profile.avatar : null}
+								/>
 							</Link>
 						</li>
 					</>
 				) : null}
 			</ul>
 		</NavbarStyled>
-	)
-}
+	);
+};
 
-export default Navbar
+export default Navbar;

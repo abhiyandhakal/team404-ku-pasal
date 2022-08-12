@@ -1,25 +1,11 @@
-import Hero from '../components/jsx-components/Hero'
-import List from '../components/jsx-components/List'
-import Navbar from '../components/jsx-components/Navbar'
-import MainStyled from '../components/styled-components/main/main.styled'
-import { v4 as uuid } from 'uuid'
-import Footer from '../components/jsx-components/Footer'
+import Hero from '../components/jsx-components/Hero';
+import List from '../components/jsx-components/List';
+import Navbar from '../components/jsx-components/Navbar';
+import MainStyled from '../components/styled-components/main/main.styled';
+import { v4 as uuid } from 'uuid';
+import Footer from '../components/jsx-components/Footer';
 
-import { gql, useQuery } from '@apollo/client'
-
-const ME = gql`
-	query Me {
-		me {
-			user {
-				_id
-				username
-				profile {
-					avatar
-				}
-			}
-		}
-	}
-`
+import { gql, useQuery } from '@apollo/client';
 
 const PRODUCTS = gql`
 	query Products {
@@ -42,48 +28,49 @@ const PRODUCTS = gql`
 			price
 		}
 	}
-`
+`;
 
 const Home = () => {
-	const { data, error } = useQuery(PRODUCTS)
-	const { data: meData } = useQuery(ME)
+	const { data, error } = useQuery(PRODUCTS);
 	if (error) {
-		return <div>Error: {JSON.stringify(error)}</div>
+		return <div>Error: {JSON.stringify(error)}</div>;
 	}
 	if (!data) {
-		return 'Loading...'
+		return 'Loading...';
 	}
 
 	const categoryList = [
 		'all products',
 		...new Set(data.products.map((product) => product.category)),
-	]
+	];
 	return (
 		<>
 			<header>
-				<Navbar profilePic={meData ? meData.me.user.profile.avatar : null} />
+				<Navbar />
 				<Hero />
 			</header>
 			<MainStyled>
 				{categoryList.map((category) => {
-					const uniqueId = uuid()
+					const uniqueId = uuid();
 
 					const filteredList =
 						category === 'all products'
 							? data.products
-							: data.products.filter((product) => product.category === category)
+							: data.products.filter(
+									(product) => product.category === category
+							  );
 					return (
 						<List
 							key={uniqueId}
 							filteredList={filteredList}
 							category={category}
 						/>
-					)
+					);
 				})}
 			</MainStyled>
 			<Footer />
 		</>
-	)
-}
+	);
+};
 
-export default Home
+export default Home;
