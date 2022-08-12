@@ -2,7 +2,7 @@ import { DocumentType, mongoose, pre, prop, Ref } from "@typegoose/typegoose";
 import * as argon2 from "argon2";
 import md5 from "md5";
 import { flake } from "../utils/flake";
-import { Field, Int, ObjectType } from "type-graphql";
+import { Field, ObjectType } from "type-graphql";
 import { Product } from "./Product";
 import { ProductModel } from ".";
 
@@ -25,16 +25,6 @@ export class Profile {
   @Field(() => String)
   @prop({ type: () => String, default: () => "" })
   public bio: string;
-}
-
-@ObjectType()
-export class Authority {
-  @Field(() => Int)
-  @prop({ default: () => 0, type: () => Number, required: true })
-  public level!: number;
-
-  @prop({ default: () => null, type: () => String })
-  public adminToken!: string;
 }
 
 @ObjectType()
@@ -98,16 +88,12 @@ export class User {
   })
   public products: Ref<Product>[];
 
-  @Field(() => Authority)
+  @Field(() => Boolean)
   @prop({
-    type: () => Authority,
-    default: () => {
-      const authority = new Authority();
-      return authority;
-    },
-    _id: false,
+    type: () => Boolean,
+    default: false,
   })
-  public authority!: Authority;
+  public isAdmin: boolean;
 
   /**
    * Checks if the plain entered password matches with hashed password.
